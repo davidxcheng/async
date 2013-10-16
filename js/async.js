@@ -1,5 +1,5 @@
-(function(doc, async) {
-	async.reveal = function () {
+(function(doc, ai) {
+	ai.reveal = function () {
 		var el = doc.getElementById('email');
 
 		if (el && el.rel){
@@ -11,13 +11,30 @@
 
 	if (doc.readyState == 'complete') {
 		// just in case DOMContentLoaded has already been fired
-		async.reveal();
+		ai.reveal();
 	}
 	else if (doc.addEventListener) {
 		// < ie9 dont have addEventListener (and don't get to see adr)
-		document.addEventListener('DOMContentLoaded', async.reveal, false);
+		document.addEventListener('DOMContentLoaded', ai.reveal, false);
 	}
-})(document, document.async || {});
+})(document, document.ai || {});
+
+function toBinary(codePoint) {
+	var bin = [64, 32, 16, 8, 4, 2, 1],
+		res = [0];
+
+	bin.map(function(x) {
+		if (codePoint >= x) {
+			res.push(1);
+			codePoint = codePoint - x;
+		}
+		else {
+			res.push(0);
+		}
+	})
+
+	return res.join('');
+}
 
 var ascii = document.getElementById('logo-name')
 	.innerText
@@ -27,3 +44,7 @@ var ascii = document.getElementById('logo-name')
 	});
 
 document.getElementById('ascii').innerText = ascii.join(' ');
+var binary = ascii.map(function(codePoint) {
+	return toBinary(codePoint);
+});
+document.getElementById('binary').innerText = binary.join(' ');
