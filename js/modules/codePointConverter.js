@@ -1,6 +1,6 @@
 define([], function() {
 	return {
-		toUtf8: function(codePoint) {
+		toUtf8BinaryStringRepresentation: function(codePoint) {
 			var bin = [64, 32, 16, 8, 4, 2, 1],
 			res = [0];
 
