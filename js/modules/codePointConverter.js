@@ -1,5 +1,6 @@
 define([], function() {
 	return {
+		// TODO: Rename to toUtf8Octets
 		toUtf8BinaryStringRepresentation: function(codePoint) {
 			var bin = [64, 32, 16, 8, 4, 2, 1],
 			res = [0];
