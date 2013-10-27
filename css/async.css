@@ -39,7 +39,7 @@ a:hover, a:active { text-decoration: none; color: pink; }
 	cursor: default;
 	text-align: center;
 }
-#octets { color: #777; }
+#octets { color: #c7c7c7; }
 #octets { margin: 6px 0 -6px 0; }
 #octets span { margin: 0 6px; }
 #alpha {
