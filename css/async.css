@@ -9,6 +9,7 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 }
 
 html { font-family: Arial; }
+body { background: black; }
 
 h1, h2, h3 {
 	font-family: 'League Gothic';
@@ -39,11 +40,9 @@ a:hover, a:active { text-decoration: none; color: pink; }
 	cursor: default;
 	text-align: center;
 }
-#dec, #binary { color: #c7c7c7; }
-#dec span { margin: 0 17px; }
-#dec {display: none;}
-#binary { margin: 6px 0 -6px 0; }
-#binary span { margin: 0 6px; }
+#octets { color: #777; }
+#octets { margin: 6px 0 -6px 0; }
+#octets span { margin: 0 6px; }
 #alpha {
 	font: 86px courier; text-transform: lowercase; color: black;
 	text-shadow: -2px 2px 0px #d7d7d7;
