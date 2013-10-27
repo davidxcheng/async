@@ -32,7 +32,8 @@ define([], function() {
 		if (binary.length < 8) {
 			// pad on zeros to make it at least 8 bits long
 			// this simplifies logic for 1-byte sequences (0xxxxxxx)
-			for (var i = 0; i < 8 - binary.length; i++)
+			var length = 8 - binary.length;
+			for (var i = 0; i < length; i++)
 				binary = [0].concat(binary);
 		}
 
