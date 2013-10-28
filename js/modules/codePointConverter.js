@@ -71,8 +71,8 @@ define([], function() {
 		for(var i = 0; i < numberOfOctets; i++)
 			firstOctet.push(1);
 		firstOctet.push(0);
-		// 110xxxxx signals that there are 2 bytes in the sequence
-		// 1110xxxx signals that there are 3 bytes in the sequence and so on.
+		// 110xxxxx for a 2-byte sequence
+		// 1110xxxx for a 3-byte sequence and so on.
 		octets.push(firstOctet);
 
 		for(var i = 1; i < numberOfOctets; i++)
