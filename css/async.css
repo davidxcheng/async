@@ -27,11 +27,6 @@ a:hover, a:active { text-decoration: none; color: pink; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-#wrap {
-	max-width:820px;
-	margin: 0 auto;
-}
-
 #logo {
 	font-family: courier;
 	margin: 8px 0;
@@ -39,8 +34,11 @@ a:hover, a:active { text-decoration: none; color: pink; }
 	cursor: default;
 	text-align: center;
 }
-#octets { color: #c7c7c7; }
-#octets { margin: 6px 0 -6px 0; }
+#octets {
+	color: #c7c7c7;
+	margin: 6px 0 -6px 0;
+	overflow: hidden;
+}
 #octets span { margin: 0 6px; }
 #alpha {
 	font: 86px courier; text-transform: lowercase; color: black;
@@ -55,10 +53,30 @@ main small {
 	color: black;
 }
 
+header {
+	margin-bottom: 20px;
+}
+
+.roster__item {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.roster__item:first-child {
+	margin-left: 0;
+}
+
+.roster__avatar {
+	width: 44px;
+	height: 44px;
+	border-width: 3px;
+	border-radius: 22px;
+}
+
 footer { text-align: center; font: 10px Arial; margin-top: 60px; }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 450px) {
+	#octets { display: none; }
 }
 
 @media only screen and (max-width: 320px) {
