@@ -60,6 +60,7 @@ header {
 .roster__item {
 	display: inline-block;
 	margin-left: 10px;
+	cursor: pointer;
 }
 
 .roster__item:first-child {
