@@ -61,6 +61,14 @@ header {
 	display: inline-block;
 	margin-left: 10px;
 	cursor: pointer;
+
+	-webkit-transition: transform .8s;
+	transition: transform .8s;
+}
+
+.roster__item:hover {
+	-webkit-transform: scale(1.4);
+	transform: scale(1.4);
 }
 
 .roster__item:first-child {
