@@ -11,9 +11,9 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
 html { font-family: Arial; }
 
 h1, h2, h3 {
-	font-family: 'League Gothic';
-	text-transform: uppercase;
-	color: black;
+    font-family: 'League Gothic';
+    text-transform: uppercase;
+    color: black;
 }
 
 h1 { font-size: 46px; text-shadow: -2px 2px 2px #d7d7d7; }
@@ -28,71 +28,71 @@ a:hover, a:active { text-decoration: none; color: pink; }
 .clearfix { zoom: 1; }
 
 #logo {
-	margin: 30px 0 8px 0;
-	white-space: nowrap;
-	cursor: default;
-	text-align: center;
+    margin: 30px 0 8px 0;
+    white-space: nowrap;
+    cursor: default;
+    text-align: center;
 }
 
 #octets {
     font-family: courier;
-	color: #c7c7c7;
-	margin: 12px 0 -6px 0;
-	overflow: hidden;
+    color: #c7c7c7;
+    margin: 12px 0 -6px 0;
+    overflow: hidden;
 }
 
 #octets span { margin: 0 6px; }
 
 main { text-align: center;}
 main small {
-	text-transform: uppercase;
-	font-family: 'League Gothic';
-	font-size: 24px;
-	color: black;
+    text-transform: uppercase;
+    font-family: 'League Gothic';
+    font-size: 24px;
+    color: black;
 }
 
 header {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .roster__item {
-	display: inline-block;
-	margin-left: 10px;
-	cursor: pointer;
+    display: inline-block;
+    margin-left: 10px;
+    cursor: pointer;
 
-	-webkit-transition: transform .8s;
-	transition: transform .8s;
+    -webkit-transition: transform .8s;
+    transition: transform .8s;
 }
 
 .roster__item:hover {
-	-webkit-transform: scale(1.4);
-	transform: scale(1.4);
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
 }
 
 .roster__item:first-child {
-	margin-left: 0;
+    margin-left: 0;
 }
 
 .roster__avatar {
-	width: 44px;
-	height: 44px;
-	border-width: 3px;
-	border-radius: 22px;
+    width: 44px;
+    height: 44px;
+    border-width: 3px;
+    border-radius: 22px;
 }
 
 footer { text-align: center; font: 10px Arial; margin-top: 60px; }
 
 @media screen and (max-width: 450px) {
-	#octets { display: none; }
+    #octets { display: none; }
 }
 
 @media only screen and (max-width: 320px) {
-	#wrap { width: 320px; margin: 0; top: 0;}
-	#logo { display: inline-block; margin: 8px 0 8px 0px; width: 320px; }
-	#alpha { font-size: 52px; text-shadow: -2px 2px 1px #d7d7d7; margin: 0 4px; }
+    #wrap { width: 320px; margin: 0; top: 0;}
+    #logo { display: inline-block; margin: 8px 0 8px 0px; width: 320px; }
+    #alpha { font-size: 52px; text-shadow: -2px 2px 1px #d7d7d7; margin: 0 4px; }
 
-	h1 { font-size: 26px; text-shadow: none; }
-	h2 { font-size: 20px; text-shadow: none; }
-	footer { margin: 40px 0 4px; }
-	footer a:link, .contact a:visited { color: magenta; }
+    h1 { font-size: 26px; text-shadow: none; }
+    h2 { font-size: 20px; text-shadow: none; }
+    footer { margin: 40px 0 4px; }
+    footer a:link, .contact a:visited { color: magenta; }
 }

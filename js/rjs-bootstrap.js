@@ -1,8 +1,8 @@
 require.config({
-	baseUrl: 'js'
+    baseUrl: 'js'
 });
 
 require(['modules/reveal', 'async'], function(reveal, ai) {
-	reveal('email');
-	ai.init();
+    reveal('email');
+    ai.init();
 });
