@@ -14,7 +14,7 @@ define([], function() {
     * Returns an array of the binary representation of the codePoint
     * Example: 65 -> [0, 1, 0, 0, 0, 0, 1]
     */
-    var toBinary = function(codePoint) {
+    var _toBinary = function(codePoint) {
 
         var binary = [];
 
@@ -44,7 +44,7 @@ define([], function() {
     * Prepares octets by adding their headers and returns them in an array
     * Example: [[1, 1, 0], [1, 0]] for a 2-byte sequence
     */
-    var prepareOctets = function(codePoint) {
+    var _prepareOctets = function(codePoint) {
 
         var octets = [],
             numberOfOctets = 0;
@@ -87,8 +87,8 @@ define([], function() {
     * Example: 162 -> ["11000010", "10100010"]
     */
     var toUtf8Octets = function (codePoint) {
-        var binary = toBinary(codePoint),
-            octets = prepareOctets(codePoint);
+        var binary = _toBinary(codePoint),
+            octets = _prepareOctets(codePoint);
 
         if (octets.length == 1) {
             octets[0] = binary.join('');
