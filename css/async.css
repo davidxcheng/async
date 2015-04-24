@@ -20,8 +20,9 @@ h1 { font-size: 46px; text-shadow: -2px 2px 2px #d7d7d7; }
 h1 b { font-weight: normal; text-shadow: -1px 1px 1px #ECDC00; }
 h2 { font-size: 36px; margin-top: 6px; }
 p { font: 12px Arial; }
-a:link, a:visited { text-decoration: none; color: #c7c7c7; }
-a:hover, a:active { text-decoration: none; color: pink; }
+a { outline: none; }
+a:link, a:visited { text-decoration: none; color: #58c8c0; }
+a:hover, a:active { text-decoration: underline; color: #58c8c0; }
 
 .clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }
 .clearfix:after { clear: both; }
@@ -57,26 +58,27 @@ header {
 .human {
     display: inline-block;
     margin-left: 10px;
-
-    -webkit-transition: transform .8s;
-    transition: transform .8s;
 }
 
 .human:first-child {
     margin-left: 0;
 }
 
-.human:hover {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4);
-}
-
 .avatar {
-	display: inline-block;
-	width: 44px;
-	height: 44px;
+    display: inline-block;
+    width: 44px;
+    height: 44px;
     background-size: 44px 44px;
     border-radius: 22px;
+    border-width: 2px;
+
+    -webkit-transition: transform .8s;
+    transition: transform .8s;
+}
+
+.avatar-active {
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4);
 }
 
 .avatar-jh { background-image: url(../img/jonnie.jpeg); }
@@ -84,7 +86,22 @@ header {
 .avatar-kb { background-image: url(../img/karl.jpeg); }
 .avatar-am { background-image: url(../img/anders.jpg); }
 
+.profile-wrapper { 
+    max-width: 400px;
+    margin: 20px auto 0 auto;
+    padding: 0 10px;
+
+    opacity: 0;
+    -webkit-transition: opacity 3s;
+    transition: opacity 3s;
+}
+
+.behold {
+    opacity: 1;
+}
+
 footer { text-align: center; font: 10px Arial; margin-top: 60px; }
+a.mailto { color: #d7d7d7; }
 
 @media screen and (max-width: 450px) {
     #octets { display: none; }
@@ -98,5 +115,5 @@ footer { text-align: center; font: 10px Arial; margin-top: 60px; }
     h1 { font-size: 26px; text-shadow: none; }
     h2 { font-size: 20px; text-shadow: none; }
     footer { margin: 40px 0 4px; }
-    footer a:link, .contact a:visited { color: magenta; }
+    
 }

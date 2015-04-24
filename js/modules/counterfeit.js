@@ -1,7 +1,9 @@
 define([
-    'modules/on'
+    'modules/on',
+    'modules/css-class',
 ], function(
-    on
+    on,
+    cssClass
 ) {
     "use strict";
 
@@ -15,8 +17,10 @@ define([
             els = selectorOrElement;
 
         return {
+            el: els,
             on: on.bind(els),
-            el: els
+            addClass: cssClass.addClass.bind(els),
+            removeClass: cssClass.removeClass.bind(els),
         };
     };
 
