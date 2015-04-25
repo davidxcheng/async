@@ -12,14 +12,14 @@ define([
     profiles.kb = { name: 'Karl Böhlmark', pitch: '<p>Lika mycket arkitekt som skicklig kodare. Har bl a varit med och byggt en betalningslösning, lösningar för både live- och videostreaming, e-handelssajt etc.</p>' };
     profiles.am = { name: 'Anders Martini', pitch: '<p>Junior webbutvecklare med en mycket lovande utvecklingskurva tack vare orädd inställning och stor aptit på kodande! Har senaste tiden jobbat med kodbaser som bygger på .NET MVC, JavaScript, HTML och CSS.</p>' };
 
-    var elProfileName = document.getElementById('profile-name'),
+    var $profileName = $('#profile-name'),
         elProfilePitch = document.getElementById('profile-pitch')
 
     var _showProfile = function(profile) {
         var $profileWrapper = $('.profile-wrapper');
 
         $profileWrapper.removeClass('behold');
-        elProfileName.innerHTML = profile.name;
+        $profileName.html(profile.name);
         elProfilePitch.innerHTML = profile.pitch;
         $profileWrapper.addClass('behold');
     };

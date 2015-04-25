@@ -1,9 +1,11 @@
 define([
     'modules/on',
     'modules/css-class',
+    'modules/inner-html'
 ], function(
     on,
-    cssClass
+    cssClass,
+    html
 ) {
     "use strict";
 
@@ -21,6 +23,7 @@ define([
             on: on.bind(els),
             addClass: cssClass.addClass.bind(els),
             removeClass: cssClass.removeClass.bind(els),
+            html: html.bind(els)
         };
     };
 
