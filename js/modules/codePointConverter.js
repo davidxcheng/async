@@ -12,7 +12,7 @@ define([], function() {
 
     /**
     * Returns an array of the binary representation of the codePoint
-    * Example: 65 -> [0, 1, 0, 0, 0, 0, 1]
+    * Example: 65 -> [0, 1, 0, 0, 0, 0, 0, 1]
     */
     var _toBinary = function(codePoint) {
 
